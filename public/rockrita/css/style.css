@@ -1,0 +1,1523 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900|Open+Sans:300,400,600,700");
+@import url("../css/bootstrap.css");
+@import url("../css/animate.css");
+@import url("../css/jquery.fancybox.min.css");
+@import url("../css/slick.css");
+@import url("../css/xicon.css");
+@import url("../css/variables.css");
+@import url("../css/mobile-nav.css");
+@font-face {
+  font-family: century-gothic;
+  src: url(../fonts/century-gothic.ttf);
+}
+@font-face {
+  font-family: Bevan;
+  src: url(../fonts/Bevan.ttf);
+}
+@font-face {
+  font-family: Bungee-Hairline;
+  src: url(../fonts/Bungee-Hairline.ttf);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: rgb(236, 179, 118);
+  --secondary-color: rgb(34, 31, 47);
+  --layer-color: rgb(249, 243, 228);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+a:hover {
+  text-decoration-line: none;
+}
+
+li {
+  list-style: none;
+}
+
+/************* Theme Button CSS Start *************/
+
+.theme-btn {
+  background: var(--primary-color);
+  padding: 12px 30px;
+  color: #fff;
+  margin: 10px 0px 0px 0px;
+  display: inline-block;
+  border: 1px solid var(--primary-color);
+  transition: all 0.6s ease;
+}
+
+.theme-btn:hover {
+  background: transparent;
+  color: var(--primary-color);
+}
+
+/************* Theme Button CSS End *************/
+
+/************* header Section CSS Start *************/
+
+.header-top-txt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+
+.header-top {
+  padding: 5px 0px;
+  background: var(--layer-color);
+}
+
+.header-top-txt h5 {
+  font-family: century-gothic;
+  color: var(--secondary-color);
+  margin: 0px;
+  font-size: 16px;
+}
+
+.header-top-txt a {
+  font-family: century-gothic;
+  color: var(--secondary-color);
+  font-size: 16px;
+}
+
+.header-top-txt a i {
+  font-size: 18px;
+  margin: 0px 5px 0px 0px;
+  line-height: 10px;
+}
+
+.header-main {
+  background: url(../images/header-main-bg.png) no-repeat center;
+  background-size: cover;
+  padding: 30px 30px;
+  background-color: var(--secondary-color);
+}
+
+.header-logo img {
+  width: 180px;
+}
+
+.header-search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.header-search-bar input {
+  width: 100%;
+  padding: 10px 20px;
+  background: var(--layer-color);
+  border: none;
+  height: 50px;
+}
+
+.header-search-bar select {
+  width: 90px;
+  height: 50px;
+  padding: 0px 10px 0px 5px;
+  font-family: "century-gothic";
+  text-transform: uppercase;
+  font-size: 14px;
+  background: var(--primary-color);
+  border: none;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.header-search-bar button {
+  width: 70px;
+  height: 50px;
+  border: none;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.header-search-bar input::placeholder {
+  font-family: "century-gothic";
+  color: #000;
+}
+
+.header-search-bar input:focus {
+  outline: none;
+}
+
+.header-search-bar select:focus {
+  outline: none;
+}
+
+.header-search-bar button:focus {
+  outline: none;
+}
+
+.header-socials ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+}
+
+.header-socials {
+  height: 100%;
+}
+
+.header-socials ul li a {
+  color: #fff;
+  font-size: 25px;
+  transition: all 0.6s ease;
+}
+
+.header-socials ul li a:hover {
+  color: var(--primary-color);
+}
+
+.header-socials ul li span {
+  background: var(--primary-color);
+  padding: 0px 8px;
+  position: relative;
+}
+
+.header-socials ul li span::before {
+  position: absolute;
+  content: "\ee04";
+  font-family: "boxicons";
+  left: -13px;
+  color: var(--primary-color);
+  font-size: 21px;
+  top: -5px;
+}
+
+.header-nav {
+  background: var(--secondary-color);
+  padding: 20px 0px;
+  position: relative;
+  z-index: 0;
+}
+
+.navigation-bar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+}
+
+.navigation-bar ul li a {
+  color: #fff;
+  font-family: "century-gothic";
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.6s ease;
+  position: relative;
+  z-index: 99;
+  padding: 0px 10px;
+}
+
+.navigation-bar ul li a:hover {
+  color: var(--secondary-color);
+}
+
+.navigation-bar ul li a::before {
+  position: absolute;
+  content: "";
+  background: var(--primary-color);
+  height: 0px;
+  width: 100%;
+  top: -24px;
+  left: 50%;
+  transform: translate(-50%);
+  transition: all 0.6s ease;
+  z-index: -1;
+}
+
+.navigation-bar ul li a:hover:before {
+  height: 70px;
+}
+
+/************* header Section CSS End *************/
+
+/************* First Banner Section CSS Start *************/
+
+.first-banner-sec {
+  background: url(../images/first-banner-bg.png) no-repeat top center;
+  background-size: cover;
+  padding: 0px 0px;
+  background-color: var(--layer-color);
+  position: relative;
+  height: 1300px;
+  width: 100%;
+}
+
+marquee h1 {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--secondary-color);
+  font-size: 260px;
+  letter-spacing: 36px;
+  font-family: "Bevan";
+  position: relative;
+  z-index: -1;
+}
+
+.first-slide-img img {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 730px;
+}
+
+.first-banner-slider button.slick-next.slick-arrow {
+  background: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  color: transparent;
+  left: 30px;
+}
+
+.first-banner-slider button.slick-prev.slick-arrow {
+  background: transparent;
+  border: none;
+  top: 100%;
+  position: absolute;
+  left: 0px;
+  color: transparent;
+}
+
+.first-banner-slider button.slick-next.slick-arrow::before {
+  position: absolute;
+  content: "\ea50";
+  background: transparent;
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+  color: var(--secondary-color);
+  font-family: "boxicons";
+  font-size: 50px;
+  bottom: 55px;
+  cursor: pointer;
+}
+
+.first-banner-slider button.slick-prev.slick-arrow::before {
+  position: absolute;
+  content: "\ea4d";
+  background: transparent;
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+  font-family: "boxicons";
+  color: var(--secondary-color);
+  font-size: 50px;
+  left: -30px;
+  bottom: 60px;
+  cursor: pointer;
+}
+
+.first-banner-slider button.slick-next.slick-arrow:focus {
+  outline: none;
+}
+
+.first-banner-slider button.slick-prev.slick-arrow:focus {
+  outline: none;
+}
+
+.first-banner-txt {
+  position: absolute;
+  bottom: 140px;
+  width: 100%;
+  text-align: center;
+  background-image: linear-gradient(
+    97deg,
+    rgb(249 243 228 / 9%) 1.8%,
+    rgb(249 243 228) 50.6%,
+    rgb(249 243 228 / 0%) 100.3%
+  );
+  max-width: 700px;
+  animation: mover 1s infinite alternate;
+  margin: 0 auto;
+  left: 19%;
+  transform: translate(-50%);
+}
+
+.first-banner-txt h4 {
+  font-family: "century-gothic";
+  color: var(--secondary-color);
+  padding: 15px 145px;
+  text-transform: uppercase;
+  font-size: 35px;
+  margin: 0px;
+}
+
+/************* First Banner Section CSS End *************/
+
+/************* Second Banner Section CSS Start *************/
+
+.second-banner-sec {
+  background: url(../images/second-banner-bg.png) center center/cover no-repeat;
+  background-size: cover;
+  height: 550px;
+  padding: 40px 0px 0px;
+  position: relative;
+}
+
+.second-bannner-slider .slick-center .second-banner-img img {
+  transform: scale(1.2);
+}
+
+.second-bannner-slider .slick-track {
+  height: 435px;
+  margin: 40px 0px 0px 0px;
+}
+
+.second-bannner-slider .slick-center .second-banner-img {
+  position: relative;
+}
+
+.second-bannner-slider .slick-center .second-banner-img::before {
+  position: absolute;
+  content: "";
+  background-color: rgb(247 241 226 / 8%);
+  width: 390px;
+  height: 390px;
+  top: -35px;
+  left: -20px;
+  border-radius: 50%;
+}
+
+.second-banner-img img {
+  width: 90%;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.second-banner-txt {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.second-banner-txt h4 {
+  color: #ffff;
+  font-family: "century-gothic";
+  font-size: 20px;
+}
+
+.second-bannner-slider .slick-center .second-banner-txt h4 {
+  font-size: 40px;
+}
+
+.first-banner-sec marquee {
+  font-size: 130px;
+  font-family: "century-gothic";
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  height: 550px;
+}
+
+/************* Second Banner Section CSS End *************/
+
+/************* Product Section CSS Start *************/
+
+.product-sec {
+  background: url(../images/product-bg-img.png) no-repeat top center;
+  background-size: cover;
+  padding: 70px 0px 70px 0px;
+  width: 100%;
+  background-color: var(--layer-color);
+  margin-top: -10px;
+  position: relative;
+}
+
+.first-slide-img {
+  width: 100%;
+  /* left: 50%;
+  transform: translate(-50%); */
+  text-align: center;
+  margin: 0 auto;
+}
+
+.product-sec h3 {
+  text-align: center;
+  font-family: "century-gothic";
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin: 0px 0px 50px 0px;
+}
+
+.product-sec h3 span {
+  position: relative;
+  color: var(--layer-color);
+  z-index: 9;
+  padding: 10px;
+}
+
+.product-sec h3 span::before {
+  position: absolute;
+  content: "";
+  background: var(--secondary-color);
+  width: 100%;
+  height: 90px;
+  z-index: -1;
+  left: 0px;
+  top: 5px;
+}
+
+.product-cart {
+  margin: 20px 0px 30px 0px;
+  background: #fff;
+  padding: 20px 20px 0px 20px;
+  position: relative;
+  z-index: 9;
+  transform: translate(0px, 0px);
+  transition: all 0.6s ease;
+}
+
+.product-img {
+  background-color: rgb(225, 225, 225);
+  padding: 20px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 0px 20px 0px;
+  transition: all 0.6s ease;
+}
+
+.product-cart:hover .product-img {
+  background-color: var(--layer-color);
+}
+
+.product-img img {
+  width: 100%;
+  max-width: fit-content;
+  max-height: 150px;
+}
+
+.product-txt {
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+}
+
+.product-txt h4 {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-family: "century-gothic";
+  font-weight: 600;
+}
+
+.product-txt h6 {
+  font-size: 20px;
+  font-family: "century-gothic";
+  font-weight: 600;
+  color: #000;
+  transition: all 0.6s ease;
+}
+
+.product-txt h6 del {
+  font-weight: 400;
+  margin: 0px 8px 0px 0px;
+  font-size: 16px;
+}
+
+.product-txt h4 {
+  font-family: "century-gothic";
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  color: #000;
+  transition: all 0.6s ease;
+}
+
+.prod-abslt {
+  position: absolute;
+  bottom: 100px;
+  right: 0px;
+  z-index: 0;
+  animation: mover 1s infinite alternate;
+}
+
+.prod-abslt img {
+  width: 100%;
+  max-width: 320px;
+}
+
+.product-cart:hover {
+  transform: translate(0px, -10px);
+  background-color: var(--secondary-color);
+}
+
+.product-cart:hover .product-txt h4 {
+  color: #fff;
+}
+
+.product-cart:hover .product-txt h6 {
+  color: #fff;
+}
+
+/************* Product Section CSS End *************/
+
+/************* Spring Sale Section CSS Start *************/
+
+.spring-sale-sec {
+  background: url(../images/spring-sale-bg.png) no-repeat top center;
+  background-size: cover;
+  padding: 70px 0px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.spring-sale-txt {
+  margin: 80px 0px 50px 0px;
+  animation: mover 1s infinite alternate;
+}
+
+.spring-sale-txt h4 {
+  font-size: 80px;
+  font-family: "century-gothic";
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.spring-sale-txt p {
+  font-family: "century-gothic";
+  font-size: 16px;
+  margin: 10px 0px;
+}
+
+.spring-sale-txt h5 {
+  font-size: 10px;
+  font-family: "Century Gothic";
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: end;
+  -webkit-transform: matrix(5.67752724754502, 0, 0, 5.67752724754505, 0, 0);
+  width: 70px;
+  margin: 60px 0px 0px 0px;
+  position: relative;
+  z-index: 999;
+}
+
+.spring-sale-txt h5::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 55px;
+  z-index: -1;
+  background-color: var(--layer-color);
+  opacity: 0.301;
+  left: 20px;
+}
+
+/************* Spring Sale Section CSS End *************/
+
+/************* Best Seller Section CSS Start *************/
+
+.best-seller-sec {
+  background: url(../images/best-seller-bg.png) no-repeat top center;
+  background-size: cover;
+  padding: 70px 0px 30px 0px;
+  width: 100%;
+  background-color: var(--layer-color);
+  margin-top: -10px;
+  position: relative;
+}
+
+.best-seller-sec h3 {
+  text-align: center;
+  font-family: "century-gothic";
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin: 0px 0px 50px 0px;
+}
+
+.best-seller-sec h3 span {
+  position: relative;
+  color: var(--layer-color);
+  z-index: 9;
+  padding: 10px;
+}
+
+.best-seller-sec h3 span::before {
+  position: absolute;
+  content: "";
+  background: var(--secondary-color);
+  width: 100%;
+  height: 90px;
+  z-index: -1;
+  left: 0px;
+  top: 5px;
+}
+
+.seller-abslt {
+  position: absolute;
+  bottom: 250px;
+  right: 0px;
+  z-index: 0;
+}
+
+.seller-abslt img {
+  width: 100%;
+  max-width: 320px;
+  animation: mover 1s infinite alternate;
+}
+
+.hair-abslt {
+  position: absolute;
+  top: 70px;
+  left: 0px;
+  animation: mover 1s infinite alternate;
+}
+
+/************* Best Seller Section CSS End *************/
+
+/************* What Our Client Say Section CSS Start *************/
+
+.client-head {
+  padding: 70px 0px 0px 0px;
+}
+
+.client-head span {
+  margin: 0px 10px 0px 0px;
+  padding: 5px 0px 0px 10px !important;
+}
+
+.our-client-sec {
+  background-color: var(--primary-color);
+  padding: 60px 0px;
+}
+
+.client-say-cart {
+  background: #fff;
+  padding: 30px 30px;
+  width: 100%;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.21);
+}
+
+.client-data ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: orange;
+}
+
+.client-data h6 {
+  font-family: "century-gothic";
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0px 0px 8px 0px;
+}
+
+.client-data h5 {
+  font-size: 12px;
+  font-family: "century-gothic";
+}
+
+.client-data {
+  position: relative;
+}
+
+.client-data img {
+  position: absolute;
+  right: 0px;
+  top: -50px;
+  width: 90px;
+}
+
+.client-txt {
+  display: flex;
+  align-items: center;
+}
+
+.client-txt p {
+  font-family: "Century Gothic";
+  color: rgb(153, 153, 149);
+  font-size: 13px;
+}
+
+.our-client-sec .container {
+  max-width: 1250px;
+}
+
+.client-cart-slider .slick-track {
+  height: 220px;
+  margin: 30px 0px 0px 0px;
+}
+
+.client-cart-slider button.slick-prev.slick-arrow {
+  position: absolute;
+  background: transparent;
+  color: transparent;
+  width: 40px;
+  height: 40px;
+  top: -120px;
+  border: none;
+  left: auto;
+  right: 0px;
+}
+
+.client-cart-slider button.slick-prev.slick-arrow::before {
+  position: absolute;
+  content: "\ea4d";
+  background: transparent;
+  right: 30px;
+  top: -8px;
+  font-family: "boxicons";
+  color: #a1a1a1;
+  font-size: 40px;
+  left: auto;
+}
+
+.client-cart-slider button.slick-next.slick-arrow {
+  position: absolute;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  top: -120px;
+  border: none;
+  left: auto;
+  right: 0px;
+  color: transparent;
+}
+
+.client-cart-slider button.slick-next.slick-arrow::before {
+  position: absolute;
+  content: "\ea50";
+  background: transparent;
+  right: 0px;
+  top: -8px;
+  font-family: "boxicons";
+  color: #a1a1a1;
+  font-size: 40px;
+  left: auto;
+}
+
+.client-cart-slider button.slick-prev.slick-arrow:hover:before {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.client-cart-slider button.slick-next.slick-arrow:hover:before {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.client-cart-slider button.slick-next.slick-arrow:focus {
+  outline: none;
+}
+
+.client-cart-slider button.slick-prev.slick-arrow:focus {
+  outline: none;
+}
+
+/************* What Our Client Say Section CSS End *************/
+
+/************* Footer Section CSS Start *************/
+
+.footer-main {
+  background: url(../images/footer-img-bg.png) no-repeat center;
+  width: 100%;
+  padding: 50px 0px;
+}
+
+.footer-main .container-fluid {
+  padding: 0px 40px;
+}
+
+.footer-img img {
+  width: 150px;
+  margin: 0px 0px 20px 0px;
+}
+
+.footer-img p {
+  font-family: "century-gothic";
+  color: #fff;
+  font-size: 14px;
+  margin: 0px 50px 40px 0px;
+}
+
+.footer-img ul {
+  margin: 20px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-img ul li a {
+  background: var(--primary-color);
+  padding: 6px 10px;
+  color: var(--secondary-color);
+  font-size: 20px;
+  border: 1px solid var(--primary-color);
+  transition: all 0.6s ease;
+}
+
+.footer-img ul li a:hover {
+  background: transparent;
+  color: var(--primary-color);
+}
+
+.footer-links h4 {
+  font-family: "century-gothic";
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 30px 0px 20px 0px;
+}
+
+.footer-links ul li a {
+  font-size: 14px;
+  font-family: "century-gothic";
+  color: #fff;
+  font-weight: bold;
+  margin: 0px 0px 12px 0px;
+  display: inline-block;
+  transition: all 0.6s ease;
+}
+
+.footer-newsletter h3 {
+  color: #fff;
+  font-family: "century-gothic";
+  font-weight: bold;
+  font-size: 26px;
+  margin: 30px 0px 20px 0px;
+}
+
+.footer-newsletter p {
+  color: #fff;
+  margin: 0px 0px 20px 0px;
+}
+
+.footer-newsletter input {
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  font-family: "century-gothic";
+  font-size: 14px;
+}
+
+.footer-newsletter input:focus {
+  outline: none;
+}
+
+.footer-newsletter button {
+  position: absolute;
+  padding: 5px 20px;
+  right: 0px;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 25px;
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+  transition: all 0.6s ease;
+}
+
+.footer-newsletter {
+  position: relative;
+}
+
+.footer-newsletter button:hover {
+  background: transparent;
+  color: var(--primary-color);
+}
+
+.footer-newsletter button:focus {
+  outline: none;
+}
+
+.footer-copyright .container-fluid {
+  padding: 0px 40px;
+}
+
+.footer-copyright {
+  background-color: var(--primary-color);
+  padding: 10px 0px 10px 0px;
+}
+
+.copyright-txt p {
+  color: var(--secondary-color);
+  margin: 0px;
+  font-family: "century-gothic";
+  font-size: 18px;
+}
+.copyright-img img {
+  width: 100%;
+  max-width: 280px;
+}
+
+.copyright-img {
+  text-align: end;
+}
+
+.copyright-txt {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.footer-links ul li a:hover {
+  color: var(--primary-color);
+}
+
+/************* Footer Section CSS End *************/
+
+/************* Best Seller Page CSS Start *************/
+
+.inner-banner-sec {
+  background: url(../images/inner-banner-bg.png) no-repeat top center;
+  background-size: cover;
+  padding: 50px 0px;
+  width: 100%;
+}
+
+.inner-banner-txt {
+  text-align: center;
+  padding: 80px 0px;
+}
+
+.inner-banner-txt h3 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-family: "century-gothic";
+  font-weight: bold;
+  color: var(--layer-color);
+}
+
+.best-seller-prod {
+  padding: 50px 0px;
+  background: var(--layer-color);
+}
+
+/************* Best Seller Page CSS End *************/
+
+/************* Shop Page CSS Start *************/
+
+.products-filter-card {
+  padding: 60px 0px;
+  background: var(--layer-color);
+}
+
+.caterogy-card {
+  position: relative;
+  z-index: 9999;
+  border: 1px #d3d3d31f solid;
+  box-shadow: 0px 0px 15px #0000001a;
+}
+
+.filter-card .gift-card {
+  padding: 0px 10px;
+}
+
+.caterogy-card h4 {
+  background: var(--primary-color);
+  color: white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  font-family: "century-gothic";
+  align-items: center;
+  margin: 0px;
+  padding: 0px 20px;
+  font-size: 19px;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.caterogy-card ul {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  color: black;
+  margin: 0px;
+}
+
+.caterogy-card ul li a {
+  font-size: 15px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+  font-family: "century-gothic";
+}
+
+.caterogy-card ul li:hover i {
+  color: var(--primary-color);
+}
+
+.caterogy-card ul li:hover a {
+  color: var(--color-primary);
+}
+
+.caterogy-card ul li {
+  height: 50px;
+  width: 100%;
+  padding: 30px 20px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #e6e1e1;
+  cursor: pointer;
+}
+
+.caterogy-card i {
+  color: black;
+}
+
+li.pricings {
+  position: relative;
+}
+
+li.pricings::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 2px;
+  top: 12px;
+  left: -18px;
+  background: black;
+}
+
+.price-rating {
+  margin-top: 50px;
+  box-shadow: 0px 0px 20px -10px var(--color-primary);
+  position: relative;
+  z-index: 999;
+}
+
+.tt-select select {
+  width: 100%;
+  height: 50px;
+  padding: 0px 10px;
+  /*! font-family: sans-serif; */
+  background: white;
+  color: black;
+  letter-spacing: 0px;
+  font-size: 18px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border: 1px lightgray solid;
+  position: relative;
+  z-index: 9999;
+}
+
+.tt-select option {
+  color: black;
+}
+
+.head-nav a {
+  color: #000;
+  font-family: "century-gothic";
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.col-12.col-lg-3.head-nav {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+h4.service-card__h4 {
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: capitalize;
+  line-height: 25px;
+}
+
+
+
+.price-rating h4 {
+  background: var(--primary-color);
+  color: white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  font-family: "century-gothic";
+  align-items: center;
+  margin: 0px;
+  padding: 30px 20px;
+  font-size: 22px;
+  justify-content: space-between;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.price-rating ul {
+  display: flex;
+  background: white;
+  color: black;
+  padding: 20px 20px;
+  gap: 30px;
+  margin: 0px;
+  border-top: 1px solid #e6e1e1;
+  list-style: none;
+}
+
+.price-rating {
+  margin-top: 50px;
+  position: relative;
+  z-index: 999;
+  border: 1px #d3d3d31f solid;
+  box-shadow: 0px 0px 15px #0000001a;
+}
+
+.tt-select select {
+  width: 100%;
+  height: 50px;
+  padding: 0px 10px;
+  background: white;
+  color: black;
+  letter-spacing: 0px;
+  font-size: 18px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border: 1px lightgray solid;
+  position: relative;
+  z-index: 9999;
+  font-family: "century-gothic";
+  font-size: 16px;
+}
+
+.tt-select option {
+  color: black;
+}
+
+/************* Shop Page CSS End *************/
+
+/*21. Contact CSS
+========================================*/
+.contact-us .single-head ul {
+  padding-left: 0px;
+}
+.contact-us {
+  position: relative;
+  z-index: 43;
+  padding: 50px 0px;
+}
+.contact-us .title {
+  padding: 0px 0px 30px 0px;
+}
+.contact-us .title h4 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+.contact-us .title h3 {
+  text-transform: capitalize;
+  font-family: 'century-gothic';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 54px;
+  text-align: center;
+  color: var(--secondary-color);
+}
+.contact-us .single-head {
+  padding: 50px;
+  box-shadow: 0px 0px 15px #0000001a;
+  height: 100%;
+}
+.contact-us .single-info {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.contact-us .single-info i {
+  color: #fff;
+  font-size: 18px;
+  display: inline-block;
+  margin-bottom: 15px;
+  height: 40px;
+  width: 40px;
+  display: block;
+  text-align: center;
+  border-radius: 3px;
+  line-height: 40px;
+  background: var(--primary-color);
+}
+.contact-us .single-info ul .contact-us .single-info ul li {
+  margin-bottom: 5px;
+}
+.contact-us .single-info ul li:last-child {
+  margin-bottom: 0;
+}
+.contact-us .single-info ul li a {
+  font-weight: 400;
+}
+.contact-us .single-info ul li a:hover {
+  color: var(--primary-color);
+}
+.contact-us .single-info .title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #333;
+  font-size: 18px;
+  text-align: left;
+  padding-bottom: 0;
+}
+.contact-us .form-main {
+  box-shadow: 0px 0px 15px #0000001a;
+  padding: 50px;
+}
+.contact-us .form .form-group input {
+  height: 48px;
+  line-height: 48px;
+  width: 100%;
+  border: 1px solid #e6e2f5;
+  padding: 0px 20px;
+  color: #333;
+  border-radius: 0px;
+  font-weight: 400;
+}
+.contact-us .form .form-group textarea {
+  height: 180px;
+  width: 100%;
+  border: 1px solid #e6e2f5;
+  padding: 15px 20px;
+  color: #333;
+  border-radius: 0px;
+  resize: none;
+  font-weight: 400;
+}
+.contact-us .form .form-group label {
+  color: var(--secondary-color);
+  position: relative;
+  font-family: 'century-gothic';
+}
+.contact-us .form .form-group label span {
+  color: #ff2c18;
+  display: inline-block;
+  position: absolute;
+  right: -12px;
+  top: 4px;
+  font-size: 16px;
+}
+.contact-us .form .button {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-us .form .button .btn {
+  height: 50px;
+  border: none;
+}
+
+.contact-us .title h4 {
+  font-family: 'century-gothic';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.contact-us .form .form-group input:focus {
+  outline: none;
+}
+
+.form-group.button button:focus {
+  outline: none;
+}
+
+.contact-us .form .form-group textarea:focus {
+  outline: none;
+}
+
+.form-group .theme-btn {
+  font-family: 'century-gothic';
+  border-radius: 40px;
+  padding: 12px 40px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/*======================================
+End Contact CSS*/
+
+
+.order-status-txt p {
+  font-family: 'century-gothic';
+}
+
+.order-status-sec {
+  padding: 50px 0px;
+}
+
+
+#auth{
+	padding: 60px 0px;
+}
+
+.login_register{
+	background: #ffffff;
+    padding: 50px;
+    box-shadow: 1px 3px 10px #d8d8d8;
+}
+
+.login_register .form-control {
+	height: auto;
+    display: block;
+    width: 100%;
+   	padding: 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #CCC;
+    border-radius: .25rem;
+    margin-top: 15px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.login_register .form-control:focus{
+	outline: none;
+	-webkit-box-shadow: none;
+    box-shadow: none;
+	border: 1px solid #000;
+}
+
+.login_register .btn-login{
+	display: block;
+	background: #FFF;
+	padding: 18px 50px;
+	border: 1px solid var(--primary-color);
+	color: var(--primary-color);
+	transition: all 0.3s;
+	width: 100%;
+	margin-top: 30px;
+	cursor: pointer;
+}
+.login_register .btn-login:hover{
+    background: var(--primary-color);
+    color: #FFF;
+}
+
+.login_register .right_link{
+	color: var(--primary-color);
+	margin-top: 15px;
+	transition: all 0.3s;
+	display: inline-block;
+}
+
+.login_register .right_link:hover{
+	text-decoration: underline;
+}
+
+.create-account-link{
+	color: var(--primary-color);
+	display: inline-block;
+	margin-top: 15px;
+	transition: all 0.3s;
+}
+
+.section-heading{
+	text-align: center;
+	font-weight: 600;
+	margin-bottom: 60px;
+	color: var(--primary-color);
+	position: relative;
+	line-height: 24px;
+}
+
+.section-heading::after{
+	content: '';
+    width: 60px;
+    height: 6px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+
+.create-account-link:hover {
+    color: var(--secondary-color);
+}
+
+
+.about-us-img img {
+    width: 100%;
+    transform: scale(1);
+    transition: all .6s ease;
+}
+
+.about-us-sec {
+    padding: 80px 0px;
+}
+
+.aboutus-txt {
+    padding: 70px 20px;
+}
+
+.aboutus-txt h3 {
+    font-size: 50px;
+    font-family: 'century-gothic';
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.aboutus-txt p {
+    margin: 10px 0px 20px 0px;
+    font-size: 18px;
+    font-family: 'century-gothic';
+}
+
+
+.about-us-img img:hover {
+    transform: scale(1.1);
+}
+
+.about-us-img {
+    height: 540px;
+    overflow: hidden;
+}
+
+
+/************* Keyframe Animation CSS Start *************/
+
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
